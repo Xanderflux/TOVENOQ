@@ -1,0 +1,10 @@
+[build]
+  command = "npm run lint && npm test && npx --no-install tsc --noEmit"
+  publish = "dist/client"
+
+[build.environment]
+  NODE_VERSION = "24"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+[build.processing.html]
+  pretty_urls = true

@@ -23,6 +23,11 @@ const eslintConfig = defineConfig([
   jsxA11y.flatConfigs.recommended,
   next.configs["core-web-vitals"],
   {
+    files: ["components/site-header.tsx", "components/site-footer.tsx"],
+    // The static vinext export needs ordinary anchors for the wordmark links.
+    rules: { "@next/next/no-html-link-for-pages": "off" },
+  },
+  {
     languageOptions: {
       globals: {
         ...globals.browser,

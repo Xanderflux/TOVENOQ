@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { StoreProvider } from "../components/store-provider";
+import { createPageMetadata, siteTitle } from "../lib/site-metadata";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alto-footwear.example"),
+  ...createPageMetadata(siteTitle),
+  applicationName: "TOVENOQ Footwear Demo",
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+      { url: "/brand/icon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/brand/icon-16.png", type: "image/png", sizes: "16x16" },
+    ],
+    shortcut: "/brand/favicon.ico",
+    apple: { url: "/brand/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+  },
   title: {
-    default: "ALTO — Form follows motion.",
-    template: "%s — ALTO",
-  },
-  description: "ALTO makes considered footwear for the pace of the city.",
-  openGraph: {
-    title: "ALTO — Form follows motion.",
-    description: "A considered running silhouette for the pace of the city.",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ALTO — Form follows motion.",
-    description: "A considered running silhouette for the pace of the city.",
+    default: "TOVENOQ | Form follows motion.",
+    template: "%s | TOVENOQ",
   },
 };
 
@@ -27,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <StoreProvider>{children}</StoreProvider>
+      </body>
     </html>
   );
 }
