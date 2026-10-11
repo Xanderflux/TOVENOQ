@@ -356,7 +356,9 @@ html[data-shop-filter-pending] .shop-content { visibility: hidden; }
 .cart-line img { height: 88px; width: 88px; }
 .cart-line-name { display: block; font-size: 14px; margin-bottom: 6px; }
 .cart-line > div:nth-child(2) > span { display: block; line-height: 1.4; }
-.remove-line { background: transparent; color: var(--ink-soft); font-size: 11px; margin-top: 10px; padding: 0; text-decoration: underline; }
+.cart-line-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 15px; }
+.cart-line-actions .quantity-control { margin-top: 0; }
+.remove-line { background: transparent; color: var(--ink-soft); font-size: 11px; margin: 0; min-height: 31px; padding: 0 2px; text-decoration: underline; }
 .cart-summary { border-top: 1px solid var(--line); padding-top: 20px; }
 .icon-button { min-height: 44px; min-width: 44px; }
 .primary-nav a, .nav-actions button { font-size: 12px; }

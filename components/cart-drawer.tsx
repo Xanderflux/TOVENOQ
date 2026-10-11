@@ -61,28 +61,30 @@ export function CartDrawer() {
                     <span>
                       {colour.name} · EU {line.size}
                     </span>
-                    <div className="quantity-control">
+                    <div className="cart-line-actions">
+                      <div className="quantity-control">
+                        <button
+                          aria-label={`Decrease ${product.name} quantity`}
+                          onClick={() => setQuantity(line, line.quantity - 1)}
+                        >
+                          −
+                        </button>
+                        <span>{line.quantity}</span>
+                        <button
+                          aria-label={`Increase ${product.name} quantity`}
+                          disabled={line.quantity >= 10}
+                          onClick={() => setQuantity(line, line.quantity + 1)}
+                        >
+                          +
+                        </button>
+                      </div>
                       <button
-                        aria-label={`Decrease ${product.name} quantity`}
-                        onClick={() => setQuantity(line, line.quantity - 1)}
+                        className="remove-line"
+                        onClick={() => setQuantity(line, 0)}
                       >
-                        −
-                      </button>
-                      <span>{line.quantity}</span>
-                      <button
-                        aria-label={`Increase ${product.name} quantity`}
-                        disabled={line.quantity >= 10}
-                        onClick={() => setQuantity(line, line.quantity + 1)}
-                      >
-                        +
+                        Remove
                       </button>
                     </div>
-                    <button
-                      className="remove-line"
-                      onClick={() => setQuantity(line, 0)}
-                    >
-                      Remove
-                    </button>
                   </div>
                   <strong>
                     {formatPrice(product.priceCents * line.quantity)}
