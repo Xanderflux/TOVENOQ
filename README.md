@@ -202,8 +202,7 @@ local catalogue imagery.
 Local browser QA covered the public pages at phone, tablet and desktop widths,
 keyboard navigation, dialogs, product galleries and the complete fictional
 purchase journey. This is useful project evidence, not formal accessibility or
-cross-browser certification. See [local QA](docs/local-qa.md) for the recorded
-matrix and remaining manual checks.
+cross-browser certification. 
 
 ## CI and deployment
 
@@ -234,8 +233,6 @@ Render and other static hosts can serve the same `dist/client` output, but
 clean URL behavior must be verified on the chosen provider. No server process
 is required in production.
 
-See [CI/CD configuration](docs/ci-cd.md) for the activation checklist and
-known boundaries.
 
 ## Product imagery and branding
 
@@ -249,8 +246,7 @@ legacy Axis 01 Espresso asset remains available so older browser-local receipt
 snapshots do not lose their image.
 
 TOVENOQ and its T/Q symbol are provisional concept branding. The name has not
-been formally cleared for trademark, domain or social-handle use. Review
-[branding and metadata](docs/branding.md) before presenting it as a real brand.
+been formally cleared for trademark, domain or social-handle use. 
 
 ## Known limitations
 
@@ -263,5 +259,3 @@ been formally cleared for trademark, domain or social-handle use. Review
 - Social-card crawler previews and installed icon behavior need checking after
   a public URL exists.
 - The project currently has no open-source licence file.
-The historical sections in these documents preserve earlier implementation
-states for context. `docs/progress.md` is the current status record.
