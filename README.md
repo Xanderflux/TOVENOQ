@@ -263,18 +263,5 @@ been formally cleared for trademark, domain or social-handle use. Review
 - Social-card crawler previews and installed icon behavior need checking after
   a public URL exists.
 - The project currently has no open-source licence file.
-
-## Documentation
-
-- [Original project prompt](docs/original-prompt.md)
-- [Retrospective implementation plan](docs/plan.md)
-- [Current progress](docs/progress.md)
-- [Implementation log](docs/implementation-log.md)
-- [Technical decisions](docs/decisions.md)
-- [Project handover](docs/handover.md)
-- [Branding and sharing metadata](docs/branding.md)
-- [Local responsive and keyboard QA](docs/local-qa.md)
-- [CI/CD configuration](docs/ci-cd.md)
-
 The historical sections in these documents preserve earlier implementation
 states for context. `docs/progress.md` is the current status record.
